@@ -1,0 +1,15 @@
+.drama-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.drama-image {
+  width: 230px;
+  height: auto;
+  object-fit: contain;
+}
+
+.drama-details {
+  flex: 1;
+}
