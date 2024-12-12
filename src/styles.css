@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background-color: rgb(228, 255, 255);
+  color: #222;
+  font-family: 'Arial', sans-serif;
+}
+
+nav {
+  border-bottom: 1px black solid;
+  margin-bottom: 10px;
+}
+.nav-menu-link {
+  display: inline-block;
+  text-align: center;
+  width: 150px;
+  text-decoration: none;
+  color: #222;
+  padding: 11px;
+  margin-bottom: 5px;
+}
+.nav-menu-link:hover {
+  background-color: rgb(210, 245, 245);
+}
+.nav-menu-link:is(.active-route) {
+  text-decoration: underline;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}

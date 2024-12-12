@@ -1,0 +1,10 @@
+<h1>{{title}}</h1>
+@for (performance of performances; track performance.id) {
+  <div class="performance-container">
+    <div class="performance-date">{{performance.date.toLocaleString('default', {month: 'short'}).toUpperCase()}}<br>{{performance.date.toLocaleString('default', {day: '2-digit'})}}</div>
+    <div class="performance-data">
+      <h3>{{performance.dramaTitle}}</h3>
+      <p>{{performance.date.toLocaleString('default', {hour: '2-digit', minute: '2-digit'})}} | {{performance.location}} | {{performance.directorName}}</p>
+    </div>
+  </div>
+}

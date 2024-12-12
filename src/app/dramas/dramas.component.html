@@ -1,9 +1,13 @@
 <h2>{{str}}</h2>
-<div class="drama-container">
-  <img [src]="drama.imagePath" alt="Drama Image" class="drama-image">
-  <div class="drama-details">
-    <h3>{{drama.title}}</h3>
-    <p>Műfaj: {{drama.genre}}, Időtartam: {{drama.duration}} perc</p>
-    <p>Rendező: {{drama.directorName}}</p>
-  </div>
+<div class="dramas-container">
+  @for(drama of dramas; track drama.id) {
+    <div class="drama-container">
+      <img [src]="drama.imagePath" alt="Drama Image" class="drama-image">
+      <div class="drama-details">
+        <h3>{{drama.title}}</h3>
+        <p>Genre: {{drama.genre}} | Duration: {{drama.duration}} minutes</p>
+        <p>Director: {{drama.directorName}}</p>
+      </div>
+    </div>
+  }
 </div>

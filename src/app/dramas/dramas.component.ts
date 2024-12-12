@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Drama} from './model/drama.model';
+import {DramaService} from '../services/drama.service';
 
 @Component({
   selector: 'app-dramas',
@@ -9,6 +10,16 @@ import {Drama} from './model/drama.model';
   styleUrl: './dramas.component.css'
 })
 export class DramasComponent {
-  str: string = "Dramas";
-  drama: Drama = new Drama(1, "Hófehérke és a hét törpe", "mese", 90, "https://cms.static.marquardmedia.hu/data/cikk/339/339821.1200x630.jpg", "Disney", 1);
+  @Input() str: string = "Dramas";
+  dramas: Drama[] = [];
+
+  constructor(private dramaService: DramaService) {}
+
+  ngOnInit() {
+    this.initDramas();
+  }
+
+  initDramas() {
+    this.dramas = this.dramaService.getDramas();
+  }
 }

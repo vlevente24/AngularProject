@@ -1,0 +1,18 @@
+.performance-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin-left: 10%;
+}
+
+.performance-date {
+  font-weight: bold;
+  padding-top: 20px;
+  padding-right: 15px;
+  border-right: 2px solid black;
+  text-align: right;
+}
+
+.performance-data {
+  padding-left: 14px;
+}

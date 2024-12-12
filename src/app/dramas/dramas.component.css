@@ -1,13 +1,23 @@
+.dramas-container {
+  padding: 10px;
+}
+
 .drama-container {
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 2rem;
+  height: 160px;
+  width: 50%;
+  /*border: black 1px solid;*/
+  margin-left: 15%;
+  margin-right: auto;
+  padding: 20px;
 }
 
 .drama-image {
-  width: 230px;
-  height: auto;
+  height: 140px;
   object-fit: contain;
+  padding: 10px;
 }
 
 .drama-details {
