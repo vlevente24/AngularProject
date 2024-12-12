@@ -20,6 +20,6 @@ export class DramasComponent {
   }
 
   initDramas() {
-    this.dramas = this.dramaService.getDramas();
+    this.dramaService.getDramas().subscribe(dramas => this.dramas = dramas);
   }
 }

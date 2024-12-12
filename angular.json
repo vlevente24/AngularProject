@@ -62,7 +62,8 @@
               "buildTarget": "theater:build:production"
             },
             "development": {
-              "buildTarget": "theater:build:development"
+              "buildTarget": "theater:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
