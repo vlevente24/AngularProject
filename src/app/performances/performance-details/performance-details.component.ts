@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {detailedPerformance} from './model/detailedPerformance.model';
+import {PerformanceService} from '../../services/performance.service';
 
 @Component({
   selector: 'app-performance-details',
@@ -12,5 +13,13 @@ export class PerformanceDetailsComponent {
 
   @Input() id: number = 1;
 
-  // performance: detailedPerformance = undefined;
+  constructor(private performanceService: PerformanceService, public Dperformance: detailedPerformance) {}
+
+  ngOnInit() {
+    this.initDetailedPerformance();
+  }
+
+  initDetailedPerformance() {
+    this.performanceService.getPerformanceById(this.id).subscribe(performance => this.Dperformance = performance);
+  }
 }
