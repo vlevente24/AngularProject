@@ -1,0 +1,79 @@
+.small-icon {
+  width: 20px;
+}
+
+#keret {
+  width: 80%;
+  margin: auto;
+}
+
+#pinfo {
+  margin-left: 10px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#ppic {
+  margin-right: 30px;
+  margin-left: auto;
+  padding-left: 50px;
+  height: 400px;
+}
+
+.flexbox {
+  display: flex;
+}
+
+#ptopic3 {
+  text-align: center;
+}
+
+#buy {
+  width: 200px;
+  height: 50px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+  background-color: orange;
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+.director-cast {
+  display: flex; /* A rendező és a szereposztás egymás mellé kerül */
+  gap: 30px; /* Távolság a két blokk között */
+  align-items: flex-start; /* Igazítás a tetején */
+}
+
+.director {
+  flex: 0 0 auto; /* A rendező fix helyet kap */
+  white-space: nowrap; /* Egy sorban tartja a szöveget */
+}
+
+.cast {
+  margin-top: 16px;
+}
+
+.cast ul {
+  list-style: none; /* Távolítsuk el a felsorolás pontjait */
+  padding: 0;
+  margin: 0;
+}
+
+.cast li {
+  display: grid; /* Grid layout a szerep és név elválasztásához */
+  grid-template-columns: 150px 1fr; /* Fix szélesség a szerepeknek, a név kitölti a maradék helyet */
+  gap: 30px; /* Távolság a szerep és a név között */
+  margin-bottom: 8px; /* Távolság a sorok között */
+}
+
+.role {
+  text-align: right; /* Jobbra igazított szerep */
+  font-weight: bold; /* Kiemeljük a szerepeket */
+}
+
+.name {
+  text-align: left; /* Balra igazított nevek */
+}

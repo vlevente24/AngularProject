@@ -10,8 +10,9 @@ import {PerformanceService} from '../services/performance.service';
   styleUrl: './performances.component.css'
 })
 export class PerformancesComponent {
-  @Input() title: string = "Every performances";
+  title: string = "Every performances";
   performances: Performance[] = [];
+  @Input() dramaId: number = -1;
 
   constructor(private performanceService: PerformanceService) {}
 
@@ -20,6 +21,10 @@ export class PerformancesComponent {
   }
 
   initPerformances() {
+    if (this.dramaId > -1) {
+      this.performanceService.getPerformancesByDramaId(this.dramaId).subscribe(performances => this.performances = performances);
+      this.title = "Not every performances";
+    }
     this.performanceService.getPerformances().subscribe(performances => this.performances = performances);
   }
 }

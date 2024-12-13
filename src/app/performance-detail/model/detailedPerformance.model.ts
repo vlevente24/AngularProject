@@ -3,7 +3,7 @@ import {Role} from './role.model';
 export class detailedPerformance {
     constructor(
       public id: number,
-      public dramaTitle: string,
+      public title: string,
       public genre: string,
       public date: Date,
       public duration: number,

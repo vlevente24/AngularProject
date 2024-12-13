@@ -1,0 +1,33 @@
+<div id="keret">
+  <div class="flexbox">
+    <div id="ptopic2">
+      <h1>{{Dperformance?.title}}</h1>
+      <p>Genre: {{Dperformance?.genre}}</p>
+
+      <div id="pinfo">
+        <p><img class="small-icon" src="https://icons.veryicon.com/png/o/miscellaneous/face-monochrome-icon/calendar-249.png" alt="calendar icon"> {{Dperformance?.date}}</p>
+        <p><img class="small-icon" src="https://icons-for-free.com/iff/png/512/CLOCK-131994911255070765.png" alt="clock icon"> Duration of the performance: {{Dperformance?.duration}} minutes</p>
+        <p><img class="small-icon" src="https://cdn-icons-png.flaticon.com/512/3865/3865991.png" alt="place icon"> Room: {{Dperformance?.location}}</p>
+      </div>
+
+      <p style="text-align: justify">{{Dperformance?.description}}</p>
+    </div>
+    <div id="ptopic3">
+      <img id="ppic" [src]="Dperformance?.imagePath">
+      <button id="buy"><b>Buy Ticket</b></button>
+    </div>
+  </div>
+  <h3>Cast</h3>
+  <div class="director-cast">
+    <div class="director">
+      <p>Rendező: <strong>{{Dperformance?.director}}</strong></p>
+    </div>
+    <div class="cast">
+      <ul>
+        @for (role of Dperformance?.roles; track Dperformance?.id) {
+        <li><span class="role">{{role.role}}:</span> <span class="name">{{role.actorName}}</span></li>
+        }
+      </ul>
+    </div>
+  </div>
+</div>
